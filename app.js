@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 
-let apiKey = 'xyz'; 
+let apiKey = process.env.APIKEY;
 app.set('apiKey', apiKey);
 
 // catch 404 and forward to error handler
